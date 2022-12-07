@@ -1,0 +1,7 @@
+{
+  "name": "cmoon_groccy",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

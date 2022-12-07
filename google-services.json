@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "372038546571",
+    "project_id": "nad-hospital",
+    "storage_bucket": "nad-hospital.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372038546571:android:77815dba59d2492674108e",
+        "android_client_info": {
+          "package_name": "com.nadhospital"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "372038546571-4pdjbil11rboh3e9b9p4kdthqsvg4vhg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCozbmXEUnFAyKgsI_rX0z6r2ota-0vrpE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "372038546571-4pdjbil11rboh3e9b9p4kdthqsvg4vhg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

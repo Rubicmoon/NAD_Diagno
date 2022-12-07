@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar style="--background:#e4ffee;color:#000;text-align: center;
+  padding-right: 70px;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <span>Height</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center">
+  <ion-slides #slides pager="false" [options]="slideOpts" (ionSlideWillChange)="slideChanged()">
+    <ion-slide *ngFor="let data of item; let i = index">
+     <p [ngClass]="segment==i?'active':''">{{data}}</p>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
