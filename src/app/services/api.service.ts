@@ -175,11 +175,12 @@ export class ApiService {
     postData.append('user_id', user_id);
     return this.httpClient.post(this.base_url + 'profile', postData, { headers: this.headers });
   }
-  updateProfile(user_id, name, mobile) {
+  updateProfile(user_id, name, mobile,email) {
     let postData = new FormData();
     postData.append('user_id', user_id);
     postData.append('name', name);
     postData.append('mobile', mobile);
+    postData.append('email', email);
     return this.httpClient.post(this.base_url + 'edit-profile', postData, { headers: this.headers });
   }
 
@@ -401,44 +402,45 @@ export class ApiService {
 
 
 
-  addaddressform(user_id, name, address, landmark, city_link, pincode_link, location, contact_no,latitude,longitude,address_type) {
+  addaddressform(user_id, name, address, landmark, city_link, pincode_link, location, contact_no,latitude,
+    longitude,address_type,age,gender,referal_doctor) {
     let postData = new FormData();
     postData.append('user_id', user_id);
     postData.append('name', name);
     postData.append('address', address);
-    // postData.append('flat_no', flat_no);
-    // postData.append('apt', apt);
-    // postData.append('street_address', street_address);
     postData.append('landmark', landmark);
     postData.append('city_link', city_link);
     postData.append('pincode_link', pincode_link);
     postData.append('location', location);
-    // postData.append('sub_location', sub_location);
     postData.append('contact_no', contact_no);
     postData.append('latitude', latitude);
     postData.append('longitude', longitude);
     postData.append('address_type', address_type);
+    postData.append('age', age);
+    postData.append('gender', gender);
+    postData.append('referal_doctor', referal_doctor);
     return this.httpClient.post(this.base_url + 'add-address', postData, { headers: this.headers });
   }
 
-  editaddress(user_id, address_id, name, address, city_link, pincode_link, location, contact_no, landmark,latitude,longitude,address_type) {
+  editaddress(user_id, address_id, name, address, city_link, pincode_link, location, contact_no, 
+    landmark,latitude,longitude,address_type,age,gender,referal_doctor) {
     let postData = new FormData();
     postData.append('user_id', user_id);
     postData.append('address_id', address_id);
     postData.append('user_id', user_id);
     postData.append('name', name);
     postData.append('address', address);
-    // postData.append('apt', apt);
-    // postData.append('street_address', street_address);
     postData.append('city_link', city_link);
     postData.append('pincode_link', pincode_link);
     postData.append('location', location);
-    // postData.append('sub_location', sub_location);
     postData.append('contact_no', contact_no);
     postData.append('landmark', landmark);
     postData.append('latitude', latitude);
     postData.append('longitude', longitude);
     postData.append('address_type', address_type);
+    postData.append('age', age);
+    postData.append('gender', gender);
+    postData.append('referal_doctor', referal_doctor);
     return this.httpClient.post(this.base_url + 'edit-address', postData, { headers: this.headers });
   }
 

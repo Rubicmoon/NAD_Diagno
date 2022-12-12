@@ -76,7 +76,7 @@ export class ProfilePage implements OnInit {
          
       });
       loading.present();
-    this.apiserv.updateProfile(this.user_id, profileform.name, profileform.mobile).subscribe(data => {
+    this.apiserv.updateProfile(this.user_id, profileform.name, profileform.mobile,profileform.email).subscribe(data => {
       console.log(data);
       loading.dismiss();
       var response = data['response'][0];

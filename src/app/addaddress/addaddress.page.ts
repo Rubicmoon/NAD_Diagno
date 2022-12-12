@@ -67,7 +67,15 @@ export class AddaddressPage implements OnInit {
     var pattern = /^[0-9]*$/;
     var no_pattern=/^[5-9][0-9]{9}$/;
     if (addadressForm.name == "" || addadressForm.name == undefined) {
-      this.utilserv.presentAlert('Enter Name');
+      this.utilserv.presentAlert('Enter Patient Name');
+      return;
+    }
+    if (addadressForm.age == "" || addadressForm.age == undefined) {
+      this.utilserv.presentAlert('Enter Age');
+      return;
+    }
+    if (addadressForm.gender == "" || addadressForm.gender == undefined) {
+      this.utilserv.presentAlert('Select Gender');
       return;
     }
 
@@ -144,7 +152,10 @@ export class AddaddressPage implements OnInit {
       addadressForm.contact_no,
       this.userlat,
       this.userlang,
-      this.address_type
+      this.address_type,
+      addadressForm.age,
+      addadressForm.gender,
+      addadressForm.referral_doctor,
     ).subscribe(function (data) {
       console.log(JSON.stringify(data));
       var response = data['response'][0];

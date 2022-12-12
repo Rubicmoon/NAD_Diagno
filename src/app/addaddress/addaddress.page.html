@@ -24,20 +24,23 @@
       </button>
       <form #useraddadress="ngForm" (ngSubmit)="addadressSubmit(useraddadress.value)" style="margin-top:20px">
         <ion-item>
-          <ion-input type="text" placeholder="Name *" name="name" ngModel></ion-input>
+          <ion-input type="text" placeholder="Patient Name *" name="name" ngModel></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="tel" placeholder="Age *" name="age" ngModel></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-select placeholder="Select Gender *" name="gender" ngModel>
+            <ion-select-option value="male">Male</ion-select-option>
+            <ion-select-option value="female">Female</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="Referral doctor name " name="referral_doctor" ngModel></ion-input>
         </ion-item>
         <ion-item>
           <ion-textarea rows="4" cols="20" style="--padding-top:0px;" type="text" placeholder="Address *" name="address" [(ngModel)]="address"></ion-textarea>
         </ion-item>
-        <!-- <ion-item>
-          <ion-input type="text" placeholder="House / Flat No *" name="flat_no" ngModel></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input type="text" placeholder="Apartment Name *" name="apt" ngModel></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input type="text" placeholder="Street Name *" name="street_address" ngModel></ion-input>
-        </ion-item> -->
         <ion-item>
           <ion-input type="text" placeholder="Landmark" name="landmark" ngModel></ion-input>
         </ion-item>
@@ -66,24 +69,6 @@
         <ion-item>
           <ion-input type="text" placeholder="Location" name="location" ngModel></ion-input>
         </ion-item>
-        <!-- <ion-item>
-          <ion-input type="text" placeholder="Sub Location" name="sub_location" ngModel></ion-input>
-        </ion-item> -->
-
-        <!-- <ion-item>
-          <ion-select interface="popover" style="width: 100%;" placeholder="Select Area"
-            (ionChange)='selectarea($event)' name="location_link" ngModel>
-            <ion-select-option *ngFor="let area of areas" value="{{area.entry_id}}"> {{area.area}}
-            </ion-select-option>
-          </ion-select>
-        </ion-item>
-        <ion-item>
-          <ion-select interface="popover" style="width: 100%;" placeholder="Select sub location"
-            (ionChange)='selectsubarea($event)' name="sub_location_link" ngModel>
-            <ion-select-option *ngFor="let sub of subareas" value="{{sub.entry_id}}"> {{sub.sub_area}}
-            </ion-select-option>
-          </ion-select>
-        </ion-item> -->
         <ion-item>
           <ion-input maxlength="10" type="tel" placeholder="Mobile number *" name="contact_no" ngModel></ion-input>
         </ion-item>

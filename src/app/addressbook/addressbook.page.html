@@ -43,7 +43,9 @@
                 font-weight: bold;
                 font-size: 16px;">{{a.name}}
                 </h4> -->
-                <p>
+                <p><span style="font-weight:bold">Age:</span> {{a.age}}, <span style="font-weight:bold">Gender:</span> {{a.gender}}</p>
+                <p><span style="font-weight:bold">Referral Doctor:</span> {{a.referral_doctor}}</p>
+                <p><span style="font-weight:bold">Address:</span> 
                   {{a.address}},
                   <br>{{a.city}},
                   <span *ngIf="a.location!=''">{{a.location}},</span>

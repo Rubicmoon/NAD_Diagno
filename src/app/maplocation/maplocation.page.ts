@@ -4,11 +4,9 @@ import { Geolocation, GeolocationOptions, Geoposition, PositionError } from '@io
 import { UtilityService } from '../services/utility.service';
 import { AlertController, LoadingController, Platform } from '@ionic/angular';
 import { Diagnostic } from '@ionic-native/diagnostic/ngx';
-import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 import { Router } from '@angular/router';
 import { ApiService } from '../services/api.service';
 import { EventsService } from '../services/events.service';
-
 declare var google;
 @Component({
   selector: 'app-maplocation',

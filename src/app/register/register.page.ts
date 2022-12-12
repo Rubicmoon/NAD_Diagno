@@ -74,14 +74,14 @@ export class RegisterPage implements OnInit {
     //   this.utilserv.presentToast('Space not allowed in name', 'danger');
     //   return;
     // }
-    if (registerForm.email == "" || registerForm.email == undefined) {
-      this.utilserv.presentAlert('Enter valid Email Id');
-      return;
-    }
-    if (reg.test(registerForm.email) == false) {
-      this.utilserv.presentAlert('Enter valid Email address');
-      return;
-    }
+    // if (registerForm.email == "" || registerForm.email == undefined) {
+    //   this.utilserv.presentAlert('Enter valid Email Id');
+    //   return;
+    // }
+    // if (reg.test(registerForm.email) == false) {
+    //   this.utilserv.presentAlert('Enter valid Email address');
+    //   return;
+    // }
     if (registerForm.mobile == "" || registerForm.mobile == undefined) {
       this.utilserv.presentAlert('Enter mobile number');
       return;

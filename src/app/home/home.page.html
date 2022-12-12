@@ -115,15 +115,10 @@
     </div>
      <div style="padding: 3px 3px;" *ngIf="categories.length>0">
       <h4><span>
-        <span *ngIf="!utilserv.getTranslation('Categories')">Categories</span>
-          <span class="other_lang" *ngIf="utilserv.getTranslation('Categories')">{{utilserv.getTranslation('Categories')}}</span></span>
-     
-        <!-- <span class="common_color font_13" style="float:right" (click)="goCategory()">
-          <span *ngIf="!utilserv.getTranslation('See-All')">See All</span>
-          <span class="other_lang" *ngIf="utilserv.getTranslation('See-All')">{{utilserv.getTranslation('See-All')}}</span>
-        </span> -->
+            <span style="text-transform: capitalize;">{{categories[0].category}}</span>
+          </span>
       </h4>
-      <ion-slides [options]="slidesOptsHeader" loop="true">
+      <!-- <ion-slides [options]="slidesOptsHeader" loop="true">
         <ion-slide class="category" *ngFor="let slider of categories">
           <div style="width:100%;">
             <div class="catimg" (click)="gotoProductList(slider)">
@@ -136,7 +131,21 @@
            
           </div>
         </ion-slide>
-      </ion-slides>
+      </ion-slides> -->
+      <ion-row>
+        <ion-col size="3" class="category" *ngFor="let slider of categories[0].sub_categories; let i=index">
+          <div style="width:100%;">
+            <div class="catimg" (click)="gotoProductList(slider,i)">
+              <img [src]="slider.image" onerror="this.src='assets/images/default.png'" />
+            </div>
+            <h6 class="cattitle">{{slider.sub_category}}</h6>
+          </div>
+        </ion-col>
+      </ion-row>
+      <h4 (click)="gotomedicines(categories[1])"><span>
+        <span style="text-transform: capitalize;">{{categories[1].category}}</span>
+      </span>
+      </h4>
     </div>
   
 

@@ -24,6 +24,21 @@
           <ion-input type="text" placeholder="Name" name="name" [(ngModel)]="name"></ion-input>
         </ion-item>
         <ion-item>
+          <ion-input type="tel" placeholder="Age *" name="age" [(ngModel)]="age"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-select placeholder="Select Gender *" name="gender" [(ngModel)]="gender">
+            <ion-select-option value="male">Male</ion-select-option>
+            <ion-select-option value="female">Female</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="Referral doctor name " name="referal_doctor" [(ngModel)]="referal_doctor"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-textarea rows="4" cols="20" style="--padding-top:0px;" type="text" placeholder="Address *" name="address" [(ngModel)]="address"></ion-textarea>
+        </ion-item>
+        <ion-item>
           <ion-textarea rows="4" cols="20" style="--padding-top:0px;" type="text" placeholder="Address" name="address" [(ngModel)]="address"></ion-textarea>
         </ion-item>
         <!-- <ion-item>

@@ -98,7 +98,9 @@ ion-header{
   .category:nth-child(4n+1){
     div{
       .catimg{
-    background-color:#22a6fe;
+        background-color:#eaf3de;
+    // background-color:#22a6fe;
+    
      }
     }
   }
@@ -106,7 +108,9 @@ ion-header{
   .category:nth-child(4n+2){
     div{
       .catimg{
-        background:#eb5468;
+        background:#fdf1db;
+        // background:#eb5468;
+
       }
     }
   }
@@ -136,6 +140,7 @@ ion-header{
   text-align: center;
   font-size: 13px;
   font-weight: 600;
+  text-transform: capitalize;
 }
 .footericons {
   text-align: center;

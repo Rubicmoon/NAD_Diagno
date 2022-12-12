@@ -83,6 +83,6 @@ export class AddressbookPage implements OnInit {
   }
   gotoeditaddress(a){
     // alert("Coming");
-     this.router.navigate(['/editaddress', {address_id:a.id,name:a.name,address:a.address,city:a.city,pincode:a.pincode,location:a.location,landmark:a.landmark,mobile:a.mobile,address_type:a.address_type}]);
+     this.router.navigate(['/editaddress', {address_id:a.id,name:a.name,address:a.address,city:a.city,pincode:a.pincode,location:a.location,landmark:a.landmark,mobile:a.mobile,address_type:a.address_type,age:a.age,gender:a.gender,referal_doctor:a.referral_doctor}]);
   }
 }

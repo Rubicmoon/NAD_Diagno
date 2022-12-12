@@ -329,15 +329,25 @@ export class HomePage {
     this.router.navigate(['topmedicines']);
   }
   
-  gotoProductList(product) {
-    // console.log(product);
+  gotoProductList(product,index) {
+    // if(product.sub_categories.length>1){
+    //   this.router.navigate(['subcategory',{cat_id:product.id}]);
+    // }
+    // else{
+      // this.router.navigate(['/productlist', { banner: product.image, id: product.id, title: product.category }]);
+      this.router.navigate(['/productlist', { banner: this.categories[0].image, id: this.categories[0].id, title: this.categories[0].category,sub_category:product.id,current_index:index }]);
+    // }
+    
+  }
+
+  gotomedicines(product){
     if(product.sub_categories.length>1){
       this.router.navigate(['subcategory',{cat_id:product.id}]);
     }
     else{
       this.router.navigate(['/productlist', { banner: product.image, id: product.id, title: product.category }]);
+      
     }
-    // this.router.navigate(['/productlist', { banner: product.image, id: product.id, title: product.category }]);
   }
 
   // gotoPage(d) {

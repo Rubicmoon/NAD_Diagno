@@ -52,7 +52,15 @@ export class ProfileaddaddressPage implements OnInit {
     var pattern = /^[0-9]*$/;
     var no_pattern=/^[5-9][0-9]{9}$/;
     if (addadressForm.name == "" || addadressForm.name == undefined) {
-      this.utilserv.presentAlert('Enter Name');
+      this.utilserv.presentAlert('Enter Patient Name');
+      return;
+    }
+    if (addadressForm.age == "" || addadressForm.age == undefined) {
+      this.utilserv.presentAlert('Enter Age');
+      return;
+    }
+    if (addadressForm.gender == "" || addadressForm.gender == undefined) {
+      this.utilserv.presentAlert('Select Gender');
       return;
     }
 
@@ -79,27 +87,6 @@ export class ProfileaddaddressPage implements OnInit {
       this.utilserv.presentAlert('Select Pincode');
       return;
     }
-
-    // if (this.areaId == "" || this.areaId == undefined) {
-    //   this.utilserv.presentToast('Select Area', 'danger');
-    //   return;
-    // }
-
-    // if (this.subareaId == "" || this.subareaId == undefined) {
-    //   this.utilserv.presentToast('Select Sub Area', 'danger');
-    //   return;
-    // }
-    // if (addadressForm.location == "" || addadressForm.location == undefined) {
-    //   this.utilserv.presentToast('Select location', 'danger');
-    //   return;
-    // }
-
-    // if (addadressForm.sub_location == "" || addadressForm.sub_location == undefined) {
-    //   this.utilserv.presentToast('Select Sub Location', 'danger');
-    //   return;
-    // }
-
-
     if (addadressForm.contact_no == "" || addadressForm.contact_no == undefined) {
       this.utilserv.presentAlert('Enter Mobile');
       return;
@@ -154,7 +141,10 @@ export class ProfileaddaddressPage implements OnInit {
       addadressForm.contact_no,
       this.userlat,
       this.userlang,
-      this.address_type
+      this.address_type,
+      addadressForm.age,
+      addadressForm.gender,
+      addadressForm.referral_doctor,
     ).subscribe(function (data) {
       console.log(JSON.stringify(data));
       loading.dismiss();

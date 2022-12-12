@@ -43,6 +43,9 @@ export class EditaddressPage implements OnInit {
   userlat:any;
   userlang:any
   address_type:any;
+  referal_doctor:any;
+  age:any;
+  gender:any;
 
   constructor(private apiserv: ApiService,
     public utilserv: UtilityService,
@@ -66,17 +69,16 @@ export class EditaddressPage implements OnInit {
   ngOnInit() {
     this.citieslist();
     this.name = this.activeroute.snapshot.params['name'];
+    this.age = this.activeroute.snapshot.params['age'];
+    this.gender = this.activeroute.snapshot.params['gender'];
+    this.referal_doctor = this.activeroute.snapshot.params['referal_doctor'];
     this.address_id = this.activeroute.snapshot.params['address_id'];
     this.address = this.activeroute.snapshot.params['address'];
-  
-    // this.apt = this.activeroute.snapshot.params['apt'];
-    // this.street_name = this.activeroute.snapshot.params['street_name'];
     this.city = this.activeroute.snapshot.params['city'];
      this.pincode_link = this.activeroute.snapshot.params['pincode'];
     console.log(this.city);
     this.location = this.activeroute.snapshot.params['location'];
     console.log(this.location);
-    // this.sub_location = this.activeroute.snapshot.params['sub_location']
     this.landmark = this.activeroute.snapshot.params['landmark'];
     this.mobile = this.activeroute.snapshot.params['mobile'];
     this.address_type = this.activeroute.snapshot.params['address_type'];
@@ -157,11 +159,6 @@ export class EditaddressPage implements OnInit {
       return;
     }
 
-    // if (updateadressForm.mobile.toString().length > 10 || updateadressForm.mobile.toString().length < 10) {
-    //   this.utilserv.presentAlert('Enter Valid Mobile');
-    //   return;
-    // }
-
     if (pattern.test(updateadressForm.mobile) == false) {
       this.utilserv.presentAlert('Enter valid mobile number');
       return;
@@ -212,7 +209,10 @@ export class EditaddressPage implements OnInit {
       updateadressForm.landmark,
       this.userlat,
       this.userlang,
-      this.address_type
+      this.address_type,
+      updateadressForm.age,
+      updateadressForm.gender,
+      updateadressForm.referal_doctor,
     ).subscribe(function (data) {
       console.log(JSON.stringify(data));
       var response = data['response'][0];

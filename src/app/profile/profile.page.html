@@ -23,7 +23,7 @@
           <ion-input type="number" [(ngModel)]="mobile" name="mobile" placeholder="mobile"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="text" [(ngModel)]="email" name="email" placeholder="email" disabled></ion-input>
+          <ion-input type="text" [(ngModel)]="email" name="email" placeholder="email"></ion-input>
         </ion-item>
         <button class="loginbtn" style="margin-top: 20px;" type="submit">
          <span *ngIf="!utilserv.getTranslation('Save')">Save</span>  <span class="other_lang">{{utilserv.getTranslation('Save')}}</span>
