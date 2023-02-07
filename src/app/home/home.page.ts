@@ -78,6 +78,8 @@ export class HomePage {
   bestsellProducts:any=[];
   add_idBest:any;
   selectIddBest:any;
+  phone:any;
+  whatsapp_no:any;
   constructor(private apiserv: ApiService,
     private navctrl: NavController,
     public utilserv: UtilityService,
@@ -111,7 +113,7 @@ export class HomePage {
       }
     }
     
-   
+    this.getcontact();
     this.getbanners();
     this.homecategoriesList();
     this.hotlinesales();
@@ -126,10 +128,21 @@ export class HomePage {
     this.utilserv.getAppColour();
     
     
+    
   }
 
   ngOnInit() {
     
+  }
+
+  getcontact() {
+    this.apiserv.getcontactus().subscribe(data => {
+      console.log(data);
+      var response = data['response'][0];
+      this.phone = response['phone'];
+      this.whatsapp_no =response['whatsapp_no'];
+
+    })
   }
 
   getAppAdds(){

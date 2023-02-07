@@ -656,3 +656,101 @@ ion-header{
   padding-top: 1px;
   margin-top: 10px;
 }
+
+
+.call_img{
+  background: url(../../assets/images/Cuttings/call.png) 100% 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    background-size: cover;
+
+    img{
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+
+    h4{
+      position: absolute;
+      bottom: 10px;
+      font-size: 16px;
+      left: 15px;
+      color: #fff;
+    }
+}
+
+.whats_img{
+  background: url(../../assets/images/Cuttings/whatsapp_back.png) 100% 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    background-size: cover;
+    img{
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+
+    h4{
+      position: absolute;
+      bottom: 10px;
+      font-size: 16px;
+      left: 15px;
+      color: #fff;
+    }
+}
+
+.call_data{
+  background: purple;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  margin: auto;
+  padding-top: 27px;
+  .icon{
+    width: 26px;
+    height: 26px;
+    padding-top: 4px;
+    display: block;
+    background: #b30cb3;
+    margin: auto;
+    border-radius: 50%;
+    position: relative;
+    bottom: 4px;
+    ion-icon{
+      font-size:15px;
+    }
+  }
+  h4{
+    margin:0px;
+    font-size:15px;
+  }
+}
+
+.whats_data{
+  background: green;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  margin: auto;
+  padding-top: 27px;
+  .icon{
+    width: 26px;
+    height: 26px;
+    padding-top: 4px;
+    display: block;
+    background: #09b05c;
+    margin: auto;
+    border-radius: 50%;
+    position: relative;
+    bottom: 4px;
+    ion-icon{
+      font-size:20px;
+    }
+  }
+  h4{
+    margin:0px;
+    font-size:15px;
+  }
+}

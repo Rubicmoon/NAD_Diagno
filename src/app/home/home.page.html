@@ -114,10 +114,16 @@
       </div>
     </div>
      <div style="padding: 3px 3px;" *ngIf="categories.length>0">
-      <h4><span>
-            <span style="text-transform: capitalize;">{{categories[0].category}}</span>
-          </span>
-      </h4>
+      <div style="text-transform: capitalize;
+      background: #f1f1f1;
+      padding: 15px;
+      color: blue;
+      margin: 10px -20px;">
+        <h4 style="margin:0px;font-weight:700;">
+          <span style="text-transform: capitalize;">{{categories[0].category}}</span>
+        </h4>
+      </div>
+      
       <!-- <ion-slides [options]="slidesOptsHeader" loop="true">
         <ion-slide class="category" *ngFor="let slider of categories">
           <div style="width:100%;">
@@ -142,10 +148,17 @@
           </div>
         </ion-col>
       </ion-row>
-      <h4 (click)="gotomedicines(categories[1])"><span>
-        <span style="text-transform: capitalize;">{{categories[1].category}}</span>
-      </span>
-      </h4>
+      <div style="text-transform: capitalize;
+      background: #f1f1f1;
+      padding: 15px;
+      color: green;
+      margin: 10px -20px;">
+        <h4 (click)="gotomedicines(categories[1])" style="margin:0px;font-weight:700;"><span>
+          <span style="text-transform: capitalize;">{{categories[1].category}}</span>
+        </span>
+        </h4>
+      </div>
+     
     </div>
   
 
@@ -188,6 +201,64 @@
       </div>
   
     </div>
+
+    <ion-row>
+      <ion-col size="6">
+        <a href="tel:{{phone}}" style="color: #fff;
+        text-decoration: none;">
+        <span>
+          <div class="call_data">
+            <div class="icon">
+              <ion-icon name="call"></ion-icon>
+            </div>
+            <!-- <img src="../../assets/images/Cuttings/call_icon.png"/> -->
+            <h4>Call Us</h4>
+          </div>
+        </span>
+        </a>
+      </ion-col>
+      <ion-col size="6">
+        <a href="https://wa.me/+91{{whatsapp_no}}" target="_blank" style="color: #fff;
+        text-decoration: none;">
+        <span>
+          <div class="whats_data">
+            <div class="icon">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </div>
+            <!-- <img src="../../assets/images/Cuttings/whatsapp_icon.png"/> -->
+            <h4>Whatsapp</h4>
+          </div>
+        </span>
+        </a>
+      </ion-col>
+    </ion-row>
+
+    <!-- <ion-row>
+      <ion-col size="6">
+        <a href="tel:{{phone}}" style="color: #fff;
+        text-decoration: none;">
+        <span>
+          <div class="call_img">
+            <img src="../../assets/images/Cuttings/call_icon.png" />
+            <h4>Call Us</h4>
+          </div>
+        </span>
+        
+        </a>
+      </ion-col>
+      <ion-col size="6">
+        <a href="https://wa.me/+91{{whatsapp_no}}" target="_blank" style="color: #fff;
+        text-decoration: none;">
+        <span>
+          <div class="whats_img">
+            <img src="../../assets/images/Cuttings/whatsapp_icon.png" />
+            <h4>Whatsapp</h4>
+          </div>
+        </span>
+        
+        </a>
+      </ion-col>
+    </ion-row> -->
     <div class="top_med">
       <div *ngIf="hotlineproducts.length>0">
         <h6>
